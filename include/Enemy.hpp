@@ -11,11 +11,11 @@ public:
     void takeDamage(float damage);
     void setPosition(const sf::Vector2f& position);
     sf::Vector2f getPosition() const;
-    sf::Sprite* getSprite();
-    bool isAlive;
+    const sf::Sprite& getSprite() const;
+    bool isAlive = true;
 private:
-    sf::Texture texture;
-    sf::Sprite* sprite;
+    std::shared_ptr<sf::Texture> texture;
+    sf::Sprite sprite;
     float health;
     float attackDamage;
     float speed;

@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include "Player.hpp"
 #include "Enemy.hpp"
+#include "Loot.hpp"
 
 class SVRPG {
 public:
@@ -21,6 +22,7 @@ private:
     sf::View view;
     Player player;
     std::vector<Enemy> enemies;
+    std::vector<Loot> lootItems;
     sf::Clock clock;
 };
 
